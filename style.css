@@ -1,108 +1,96 @@
-/* Reset de base */
-body, h1, h2, h3, p, ul {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #222; /* Texte bien visible */
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-/* En-tête */
 header {
-  background-color: #004466;
-  color: #ffffff;
-  text-align: center;
-  padding: 30px 20px;
+    background-color: #004066;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
-  margin-bottom: 10px;
-  font-size: 2.5em;
+    margin: 0;
+    font-size: 2em;
 }
 
-header .slogan {
-  font-style: italic;
-  font-size: 1.2em;
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
 }
 
-/* Navigation */
-nav {
-  background-color: #03506F;
-  padding: 10px 0;
-  text-align: center;
+nav li {
+    margin: 0 15px;
 }
 
 nav a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-nav a:hover {
-  text-decoration: underline;
-  color: #ffcc00;
+nav a:hover,
+nav a.active {
+    color: #00ffcc;
 }
 
-/* Section principale */
-main {
-  padding: 40px 20px;
-  background-color: #ffffff;
-  text-align: center;
-  color: #222; /* Correction de couleur */
+.services-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
 }
 
-main h2 {
-  font-size: 2em;
-  margin-bottom: 30px;
-  color: #004466;
-  text-shadow: none; /* Supprime l'effet blanc flou */
+.services-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: #004066;
 }
 
-/* Liste des services */
-.service-list {
-  list-style: none;
-  padding: 0;
-  max-width: 600px;
-  margin: auto;
-  text-align: left;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.service-list li {
-  margin-bottom: 10px;
-  padding-left: 25px;
-  position: relative;
-  color: #333;
+.service-card {
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    text-align: center;
 }
 
-.service-list li::before {
-  content: "✔";
-  color: green;
-  position: absolute;
-  left: 0;
+.service-card:hover {
+    transform: translateY(-5px);
+    background-color: #e6faff;
 }
 
-/* Pied de page */
+.service-card i {
+    font-size: 2.5em;
+    color: #00b386;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0;
+}
+
 footer {
-  background-color: #111;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  main h2 {
-    font-size: 1.5em;
-  }
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
