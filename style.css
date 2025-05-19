@@ -122,6 +122,15 @@ footer {
     .intro h2 {
         font-size: 2em;
     }
+main {
+    color: #222; /* Texte plus foncé */
+}
+
+/* Optionnel pour rendre le titre plus visible */
+main h2 {
+    color: #004466;
+    text-shadow: none;
+}
 
     .intro p {
         font-size: 1em;
